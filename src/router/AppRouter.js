@@ -7,6 +7,7 @@ import { CalendarScreen } from "../components/calendar/CalendarScreen";
 import { startCheking } from "../actions/auth";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
+import { RegisterScreen } from "../components/auth/RegisterScreen";
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
@@ -16,9 +17,7 @@ export const AppRouter = () => {
     dispatch(startCheking());
   }, [dispatch]);
 
-  if (checking) {
-    return <h5>Espere...</h5>;
-  }
+  
 
   return (
     <Router>
@@ -28,6 +27,12 @@ export const AppRouter = () => {
             exact
             path="/login"
             component={LoginScreen}
+            isAuthenticated={!!uid}
+          />
+           <PublicRoute
+            exact
+            path="/register"
+            component={RegisterScreen}
             isAuthenticated={!!uid}
           />
           <PrivateRoute

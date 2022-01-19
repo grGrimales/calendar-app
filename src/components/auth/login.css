@@ -48,3 +48,20 @@
   font-weight: 600;
   text-decoration: none;
 }
+.link-login{
+  color: #0062cc;
+}
+
+.link-login:hover{
+
+  text-decoration: none;
+}
+
+.link-register{
+  color: #fff;
+}
+
+.link-register:hover{
+  color: #fff;
+  text-decoration: none;
+}
