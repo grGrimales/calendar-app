@@ -10,8 +10,9 @@ export const AddNewFab = () => {
   };
 
   return (
-    <button onClick={handleClickNew} className="btn btn-primary fab">
+     <button onClick={handleClickNew} className="btn btn-primary fab">
       <i className="fas fa-plus"></i>
     </button>
+   
   );
 };

@@ -67,6 +67,7 @@ export const CalendarScreen = () => {
   };
 
   return (
+    <>
     <div className="calendar-screen">
       <Navbar />
 
@@ -89,10 +90,11 @@ export const CalendarScreen = () => {
         }}
       />
 
-      <AddNewFab />
       {activeEvent && <DeleteEventFab />}
 
+      <AddNewFab />
       <CalendarModal />
     </div>
+      </>
   );
 };
